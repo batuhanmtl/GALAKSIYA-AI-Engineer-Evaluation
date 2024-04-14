@@ -1,0 +1,1 @@
+**Doküman okuma işlemlerine ait log'ları görmek adına oluşturulmuş bir klasördür. Hangi dosya başarılı bir şekilde okundu veya hangi dosyada okuma işleminde problem oluştu ve bu problem nedir gibi bilgileri içerir.**

@@ -1,7 +1,6 @@
 import os
 from langchain_community.document_loaders import TextLoader, UnstructuredPDFLoader,Docx2txtLoader
 
-ROOT_DIRECTORY = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # find SOURCE_DOCUMENTS path
 SOURCE_DIRECTORY = "lib\SOURCE_DOCUMENTS"

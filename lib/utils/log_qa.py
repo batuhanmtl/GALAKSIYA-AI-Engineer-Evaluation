@@ -1,4 +1,3 @@
-import os
 import aspose.words as aw
 from datetime import datetime
 from lib.utils.information_schema import Person

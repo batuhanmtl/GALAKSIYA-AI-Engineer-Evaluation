@@ -1,4 +1,3 @@
-from typing import List, Tuple
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.chains import LLMMathChain
