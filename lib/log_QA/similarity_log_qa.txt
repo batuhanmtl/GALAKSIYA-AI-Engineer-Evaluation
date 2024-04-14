@@ -1,0 +1,50 @@
+----------INPUT----------:
+Why Self-Attention?
+----------OUTPUT----------:
+SOURCE_0: .\lib\SOURCE_DOCUMENTS\Attention Is All You Need.pdf
+CONTENT: 
+ Self-attention, sometimes called intra-attention is an attention mechanism relating different positions of a single sequence in order to compute a representation of the sequence. Self-attention has been used successfully in a variety of tasks including reading comprehension, abstractive summarization, textual entailment and learning task-independent sentence representations [4, 27, 28, 22].
+
+End-to-end memory networks are based on a recurrent attention mechanism instead of sequence- aligned recurrence and have been shown to perform well on simple-language question answering and language modeling tasks [34].
+
+To the best of our knowledge, however, the Transformer is the first transduction model relying entirely on self-attention to compute representations of its input and output without using sequence- aligned RNNs or convolution. In the following sections, we will describe the Transformer, motivate self-attention and discuss its advantages over models such as [17, 18] and [9].
+Similarity L2 Score: 0.26887554
+
+DATE: 2024-04-14 23:06:40.703096
+**************************************************
+----------INPUT----------:
+What is the LoRA?
+----------OUTPUT----------:
+SOURCE_0: .\lib\SOURCE_DOCUMENTS\Easily Train a Specialized LLM.docx
+CONTENT: 
+ An ecosystem. LoRA is a practically useful tool that gives (almost) anyone the power to train a specialized LLM over their data. As a result, LoRA has been widely studied within the AI research community, leading to a variety of extensions, alternatives, and practical tools to go along with it. One of the most notable extensions is QLoRa, which combines LoRA with model quantization to further reduce the memory overhead of LLM fnetuning. However, this reduction in memory overhead comes at the cost of a slight decrease in training speed.
+
+
+
+
+
+New to the newsletter?
+
+Hi! I’m Cameron R. Wolfe, deep learning Ph.D. and Director of AI at Rebuy. This is the Deep (Learning) Focus newsletter, where I help readers understand AI research via overviews of relevant topics from the ground up. If you like the newsletter, please subscribe, share it, or follow me on Medium, X, and LinkedIn!
+
+
+
+
+
+Bibliography
+Similarity L2 Score: 0.27536142
+
+DATE: 2024-04-14 23:07:03.827736
+**************************************************
+----------INPUT----------:
+Dokuz eylül üniversitesinde kaç adet fakülte var?
+----------OUTPUT----------:
+SOURCE_0: .\lib\SOURCE_DOCUMENTS\DEU about.txt
+CONTENT: 
+ Dokuz Eylül Üniversitesi bugün; İzmir’in dört bir yanında; 10 Enstitü, 18 Fakülte, 2 Yüksekokul, 1 Konservatuvar, 6 Meslek Yüksekokulu, 2’si Uygulama ve Araştırma Hastanesi olmak üzere toplam 42 Uygulama ve Araştırma Merkezi ile bilimsel araştırma ve yükseköğretim görevini, kaliteli toplumsal hizmet anlayışı ile sürdürmektedir.
+
+Dokuz Eylül Üniversitesi’nde toplam 72 bin 400’e yakın öğrenci eğitim görmektedir. Bunlar arasında, 114 ülkeden gelen 6 bin 300’den fazla uluslararası öğrenci bulunmaktadır. Üniversite bünyesinde 3 bine yakın akademik personel ve 4 bin 900’e yakın idari personel görev yapmaktadır
+Similarity L2 Score: 0.2095406
+
+DATE: 2024-04-14 23:07:34.999052
+**************************************************

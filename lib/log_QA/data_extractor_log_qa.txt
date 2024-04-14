@@ -1,0 +1,44 @@
+----------INPUT----------: 
+
+File Name: Örnek CV1
+File Type: pdf
+----------OUTPUT----------: 
+
+Name: Zeynep Dizdar
+
+About: Bergama Bakırçay Mesleki ve Teknik Anadolu Lisesinden mezun oldum. Liseyi bitirip Hacettepe Sağlık Bilimleri Fakültesini kazandım ve mezun oldum. İş deneyimlerim kısmında belirttiğim yaz stajlarım haricinde dönem içinde de pek çok farklı alanlarda stajlarımı tamamladım. Örneğin; Sterilizasyon, Ameliyathane, Çocuk Acil, Ortapedi Servisi, Göz Servisi, Kan Alma, Diyaliz, Özel Eğitim ve Rehabilitasyon Kurumları vb. Bu alanlarda çeşitli eğitim ve etkinliklerde yer aldım. Çeşitli engelli çocuklara kliniklerde ve kurumlarda, sağlıklı bireylerle olumlu bağlar geliştirmek adına, oyunlarda yer aldım.
+
+Skills: ['Sorumluluk alabilme', 'Yenilikçi düşünme', 'Stres yönetiminde başarılı olabilme', 'Hızlı ve etkili kararlar alabilme', 'Takım Çalışmasına Yatkın']
+
+Experience: ['İzmir Büyükşehir Belediyesi Eşref Paşa Hastanesi | Stajyer Hemşire Ameliyathane Hizmetleri 2017-2018', 'Alsancak Nevvar- Salih İşgören Devlet Hastanesi | Stajyer Hemşire Stajyer Hemşire Yaz Stajı 2015-2016', 'Bornova Türkan Özilhan Devlet Hastanesi | Stajyer Hemşire Yaz Stajı Hemşirelik Esasları Dersi (Kardiyoloji Servisi) 2013-2014']
+
+Education: ['Hacettepe Üniversitesi Sağlık Bilimleri Fakültesinden mezun oldum. 2015-2019', 'Bergama Bakırçay Mesleki ve Teknik Anadolu Lisesi Sağlık alanında çalışmalar yaptım. 2010-2014']
+
+Languages: ['İngilizce', 'Fransızca', 'Arapça']
+
+Certificates: ['İş Sağlığı ve Güvenliği Eğitimi Katılım Sertifikası 29.02.2020-01.03.2020', 'Temel İş Sağlığı ve Güvenliği Eğitimi Sertifikası 19.02.2018-20.02.2018', 'T.C Milli Eğitim Bakanlığı Hayat Boyu Öğrenme Genel Müdürlüğü Drama Kursu Sertifikası 07.11.2017-16.01.2018', 'MEB Bilişim Teknolojisi 17.05.2012-19.05.2012']
+
+Date: 2024-04-14 23:10:17.864138
+**************************************************
+----------INPUT----------: 
+
+File Name: Örnek CV2
+File Type: docx
+----------OUTPUT----------: 
+
+Name: Mustafa Er
+
+About: Bahçeşehir Üniversitesi Hukuk Fakültesinden mezun oldum. Edindiğim bilgilere her geçen gün yenisini ekleyerek kendimi oldukça geliştirdim. Staj ve ayrı bürolarda çalıştıktan sonra kendimi büromu açmaya karar verdim. Kendi büromu açarak işe başladım. Çalışma hayatımda edindiğim deneyimlere her geçen gün daha fazlasını ekleyerek, hem kendimi geliştirmek hem de bulunduğum firmayı ileri taşımak konusunda son derece hevesli ve özveriliyim.
+
+Skills: ['İkna Kabiliyeti', 'Eleştirel Değerlendirme ve Yargı Becerisi', 'Takım Çalışmasına Yatkın', 'İnsanlarla Etkili İletişim']
+
+Experience: ['Mustafa Er Avukat Bürosu | Avukat', 'Karizma Avukatlık Bürosu | Avukat', 'Çortancıoğlu Hukuk Bürosu | Staj']
+
+Education: ['Bahçeşehir Üniversitesi Hukuk Fakültesi', 'Adana Anadolu Lisesi']
+
+Languages: ['İngilizce', 'Fransızca', 'İtalyanca']
+
+Certificates: ['Ceza muhakemesinde uzlaştırma/Ankara', 'İngilizce Kursu']
+
+Date: 2024-04-14 23:11:12.084538
+**************************************************

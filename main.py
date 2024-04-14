@@ -22,7 +22,7 @@ class GalaksiyaApplication(FastAPI):
         Returns:
             None
         """
-        if not os.listdir("lib/VECTOR_DB"):
+        if not os.path.exists("lib/VECTOR_DB/openai_index.faiss") or not os.path.exists("lib/VECTOR_DB/openai_index.pkl"):
             CreateVectorStore()
             
         super().__init__(
