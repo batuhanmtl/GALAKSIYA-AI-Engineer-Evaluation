@@ -6,7 +6,7 @@ Bu proje, bir araç tabanlı ajanın sunulduğu bir REST API geliştirmeyi amaç
 
 ### 1. similarity_search
 
-Bu araç ile SOURCE_DOCUMENTS içerisindeki dokümanlar üzerinde(pdf,docx,txt) prompt based bir şekilde belgeler içerisinden yazdığınız query ile ilgili kısmı(bu çalışmada ilgili bir adet chunk return ediliyor) benzerlik skoru(similarity_L2_score) ile birlikte return eder.
+Bu araç ile SOURCE_DOCUMENTS içerisindeki dokümanlar üzerinde(pdf,docx,txt) prompt based bir şekilde belgeler içerisinden yazdığınız query ile ilgili kısmı(bu çalışmada ilgili iki adet chunk return ediliyor) benzerlik skoru(similarity_L2_score) ile birlikte return eder.
 
 **Request body:**
 ```json

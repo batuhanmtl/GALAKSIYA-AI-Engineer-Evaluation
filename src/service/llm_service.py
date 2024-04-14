@@ -46,7 +46,7 @@ class LLMService:
         print("Similarity search is called.")
         vector_store = FAISS.load_local(index_name="openai_index",folder_path=PERSIST_DIRECTORY, embeddings=self.embeddings, allow_dangerous_deserialization=True,normalize_L2=True)
         
-        docs = vector_store.similarity_search_with_score(query, k=1)
+        docs = vector_store.similarity_search_with_score(query, k=2)
                 
         print(docs)
         

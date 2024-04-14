@@ -9,8 +9,16 @@ End-to-end memory networks are based on a recurrent attention mechanism instead 
 
 To the best of our knowledge, however, the Transformer is the first transduction model relying entirely on self-attention to compute representations of its input and output without using sequence- aligned RNNs or convolution. In the following sections, we will describe the Transformer, motivate self-attention and discuss its advantages over models such as [17, 18] and [9].
 Similarity L2 Score: 0.26887554
+SOURCE_1: .\lib\SOURCE_DOCUMENTS\Attention Is All You Need.pdf
+CONTENT: 
+ 4 Why Self-Attention
 
-DATE: 2024-04-14 23:06:40.703096
+In this section we compare various aspects of self-attention layers to the recurrent and convolu- tional layers commonly used for mapping one variable-length sequence of symbol representations (x1, ..., xn) to another sequence of equal length (z1, ..., zn), with xi, zi ∈ Rd, such as a hidden layer in a typical sequence transduction encoder or decoder. Motivating our use of self-attention we consider three desiderata.
+
+One is the total computational complexity per layer. Another is the amount of computation that can be parallelized, as measured by the minimum number of sequential operations required.
+Similarity L2 Score: 0.27875832
+
+DATE: 2024-04-14 23:25:42.848171
 **************************************************
 ----------INPUT----------:
 What is the LoRA?
@@ -33,8 +41,34 @@ Hi! I’m Cameron R. Wolfe, deep learning Ph.D. and Director of AI at Rebuy. Thi
 
 Bibliography
 Similarity L2 Score: 0.27536142
+SOURCE_1: .\lib\SOURCE_DOCUMENTS\Easily Train a Specialized LLM.docx
+CONTENT: 
+ Tied-LoRA [29]: leverages weight tying to further improve the parameter efciency of LoRA.
 
-DATE: 2024-04-14 23:07:03.827736
+
+
+
+
+GLoRA [30]: extends LoRA to adapt pretrained model weights and activations to each task in addition to an adapter for each layer.
+
+
+
+
+
+Given that so many LoRA-inspired techniques exist, there are probably a few notable extensions that are missing from the list above. If you are aware of any other techniques that are worth including, let me know in the comments!
+
+
+
+
+
+
+
+Takeaways
+
+We should now have a working understanding of LoRA, the several variants of this technique that have been proposed, and how these ideas can be applied in practice. LoRA is arguably the most widely-used practical tool for creating specialized LLMs, as it democratizes the fnetuning process by signifcantly reducing hardware requirements. Some important takeaways are outlined below.
+Similarity L2 Score: 0.3139612
+
+DATE: 2024-04-14 23:26:06.457274
 **************************************************
 ----------INPUT----------:
 Dokuz eylül üniversitesinde kaç adet fakülte var?
@@ -45,6 +79,12 @@ CONTENT:
 
 Dokuz Eylül Üniversitesi’nde toplam 72 bin 400’e yakın öğrenci eğitim görmektedir. Bunlar arasında, 114 ülkeden gelen 6 bin 300’den fazla uluslararası öğrenci bulunmaktadır. Üniversite bünyesinde 3 bine yakın akademik personel ve 4 bin 900’e yakın idari personel görev yapmaktadır
 Similarity L2 Score: 0.2095406
+SOURCE_1: .\lib\SOURCE_DOCUMENTS\DEU about.txt
+CONTENT: 
+ Yine 2021 yılında Reha Midilli Foça Turizm Fakültesinin adı Turizm Fakültesi, Seferihisar Fevziye Hepkon Uygulamalı Bilimler Yüksekokulunun adı Uygulamalı Bilimler Yüksekokulu, Spor Bilimleri Fakültesinin adı Necat Hepkon Spor Bilimleri Fakültesi, Fizik Tedavi ve Rehabilitasyon Yüksekokulunun adı Fizik Tedavi ve Rehabilitasyon Fakültesi olarak değiştirilmiştir.
 
-DATE: 2024-04-14 23:07:34.999052
+YÖK tarafından, ‘Araştırma Kapasitesi’, ‘Araştırma Kalitesi’ ve ‘Etkileşim ve İş Birliği’ başlıkları altındaki 32 gösterge kapsamında yapılan değerlendirmede gösterdiği yüksek performansla başarılı bir sınav vererek üniversitelerin ‘şampiyonlar ligi’ne giren Dokuz Eylül Üniversitesi, 13.12.2021 tarihi itibari ile sunduğu geniş araştırma olanakları, uluslararası ve ulusal projelerdeki başarısıyla “Araştırma Üniversitesi” unvanı almıştır.
+Similarity L2 Score: 0.25700557
+
+DATE: 2024-04-14 23:26:27.282183
 **************************************************
