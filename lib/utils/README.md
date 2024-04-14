@@ -5,4 +5,3 @@
 - **enums.py API girdi olarak verilecek olan  doküman tiplerini içermektedir. İstenilenin dışında dosya tipi girilmemesi için.**
 - **information_schema.py özgeçmişten çıkaralıcak olan anahtar kelimeleri içeren Person sınıfını içermektedir.**
 - **log_qa.py input ve output kayıtlarını oluşturan fonksiyonları içerir. Kayıt işlemi input ve output'ların önce txt'ye yazılıp daha sonra bu txt'nin pdf'e çevrilmesi şeklinde yapılmaktadır.**
-
