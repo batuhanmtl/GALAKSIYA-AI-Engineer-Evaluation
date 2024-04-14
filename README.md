@@ -142,7 +142,7 @@ python .\main.py
 
 ### 4. Swagger UI
 
-**API'yı başlattıktan sonra (http://127.0.0.1:8000/docs) adresinden erişilecek olaran Swagger arayüzü ile API'yı deneyebilirsiniz.**
+**API'yı başlattıktan sonra (http://127.0.0.1:8000/docs) adresinden erişilebilecek olan Swagger arayüzü ile API'yı deneyebilirsiniz.**
 
 # KAYNAKLAR
 - [Langchain Community](https://api.python.langchain.com/en/latest/community_api_reference.html)
