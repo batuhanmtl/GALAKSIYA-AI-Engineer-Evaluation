@@ -7,7 +7,7 @@ def similarity_log_qa(input: str, output: list):
     time = datetime.now()
     cnt = 0
     for doc,score in output:
-        text += f"SOURCE_{cnt}: " + doc.metadata["source"] + "\n" + "CONTENT: " + "\n"+" "+ doc.page_content + "\n" + "Similarity L2 Score: " + str(score) + "\n"
+        text += f"SOURCE_{cnt}: " + doc.metadata["source"] + "\n" + "CONTENT: " + "\n"+" "+ doc.page_content + "\n" + "Similarity L2 Score: " + str(score) + "\n\n"
         
         cnt += 1
     
