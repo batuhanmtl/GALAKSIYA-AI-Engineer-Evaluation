@@ -69,7 +69,7 @@ curl -X 'POST' \
 
 data_extractor aracı ile pdf,docx veya txt dosya tipindeki bir özgeçmiş içerisinden name,about,skills,experience,education,languages,certificates bilgileri extract edilebilir(dokumanda mevcut ise).
 Bu aracı kullanmak için belgenin içeriğinin base64 formata çevrilmiş olması gerekmektedir.
-Geliştirme aşamasında base64'e converter olarak kullanılan [araç1](https://base64.guru/converter/encode/pdf)(PDF to Base64), [araç2](https://base64.guru/converter/encode/file) DOCX to Base64
+Geliştirme aşamasında base64'e converter olarak kullanılan [araç1](https://base64.guru/converter/encode/pdf)(PDF to Base64), [araç2](https://base64.guru/converter/encode/file)(DOCX to Base64)
 
 **Request body:**
 ```json
