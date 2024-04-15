@@ -34,19 +34,18 @@ class ApiController:
         Returns:
             response (List): Best 3 documents that are similar to the query.
 
-        Example:
-            input: {
-                "query": "sorgu cümlesi"
-            }
-            output: [
-            {
-                "source": ".\\lib\\SOURCE_DOCUMENTS\\ilgili_doküman.(pdf,docx,txt)",
-                "content": "Query'e yanıt içermesi muhtemel olan dokümandaki kısmın içeriği",
-                "similarity_L2_score": 0.20954060554504395 
-            }
-            ]
 
-
+            Example:
+                input: {
+                    "query": "sorgu cümlesi"
+                }
+                output: [
+                {
+                    "source": ".\\lib\\SOURCE_DOCUMENTS\\ilgili_doküman.(pdf,docx,txt)",
+                    "content": "Query'e yanıt içermesi muhtemel olan dokümandaki kısmın içeriği",
+                    "similarity_L2_score": 0.20954060554504395 
+                }
+                ]
         """
         return self.llm_service.similarity_search(request.query)
 

@@ -1,5 +1,5 @@
+lib\SOURCE_DOCUMENTS\Attention Is All You Need.pdf loaded.
 lib\SOURCE_DOCUMENTS\DEU about.txt loaded.
-ed.pdf loaded.
 lib\SOURCE_DOCUMENTS\Easily Train a Specialized LLM.docx loaded.
 Loaded 3 documents from lib\SOURCE_DOCUMENTS
 Split into 140 chunks of text

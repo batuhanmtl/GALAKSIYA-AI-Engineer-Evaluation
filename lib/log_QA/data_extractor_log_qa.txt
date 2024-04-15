@@ -18,7 +18,7 @@ Languages: ['İngilizce', 'Fransızca', 'Arapça']
 
 Certificates: ['İş Sağlığı ve Güvenliği Eğitimi Katılım Sertifikası 29.02.2020-01.03.2020', 'Temel İş Sağlığı ve Güvenliği Eğitimi Sertifikası 19.02.2018-20.02.2018', 'T.C Milli Eğitim Bakanlığı Hayat Boyu Öğrenme Genel Müdürlüğü Drama Kursu Sertifikası 07.11.2017-16.01.2018', 'MEB Bilişim Teknolojisi 17.05.2012-19.05.2012']
 
-Date: 2024-04-14 23:10:17.864138
+Date: 2024-04-15 13:40:37.233576
 **************************************************
 ----------INPUT----------: 
 
@@ -40,5 +40,5 @@ Languages: ['İngilizce', 'Fransızca', 'İtalyanca']
 
 Certificates: ['Ceza muhakemesinde uzlaştırma/Ankara', 'İngilizce Kursu']
 
-Date: 2024-04-14 23:11:12.084538
+Date: 2024-04-15 13:41:18.316819
 **************************************************
