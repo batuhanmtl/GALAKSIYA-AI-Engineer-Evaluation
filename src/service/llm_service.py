@@ -1,16 +1,21 @@
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain.chains import LLMMathChain
-from langchain_openai import OpenAI,ChatOpenAI
+from langchain_openai import OpenAI, ChatOpenAI
 from lib.utils.information_schema import Person
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from lib.utils.base64_to_text import Base64ToText
 from langchain_core.messages import HumanMessage
 from lib.utils.constants import PERSIST_DIRECTORY
-from lib.utils.log_qa import similarity_log_qa, math_solver_log_qa, text_to_pdf_similarity_qa, text_to_pdf_math_solver_qa,data_extractor_log_qa,text_to_data_extractor_qa
-
-
-
+from lib.utils.log_qa import (
+    similarity_log_qa,
+    math_solver_log_qa,
+    text_to_pdf_similarity_qa,
+    text_to_pdf_math_solver_qa,
+    data_extractor_log_qa,
+    text_to_data_extractor_qa,
+)
+from src.model.request.document_request import DocumentRequest
 
 class LLMService:
     """
@@ -43,24 +48,27 @@ class LLMService:
         Returns:
             list: List of documents similar to the query with their sources.
         """
-        print("Similarity search is called.")
-        vector_store = FAISS.load_local(index_name="openai_index",folder_path=PERSIST_DIRECTORY, embeddings=self.embeddings, allow_dangerous_deserialization=True,normalize_L2=True)
-        
+        vector_store = FAISS.load_local(
+            index_name="openai_index",
+            folder_path=PERSIST_DIRECTORY,
+            embeddings=self.embeddings,
+            allow_dangerous_deserialization=True,
+            normalize_L2=True,
+        )
+
         docs = vector_store.similarity_search_with_score(query, k=2)
-                
-        print(docs)
-        
+
         similarity_log_qa(input=query, output=docs)
         text_to_pdf_similarity_qa()
-        
 
-        return [{
+        return [
+            {
                 "source": doc.metadata["source"],
                 "content": doc.page_content,
-                "similarity_L2_score": float(score)
-                } 
-                for doc,score in docs]
-
+                "similarity_L2_score": float(score),
+            }
+            for doc, score in docs
+        ]
 
     def math_solver(self, query: str):
         """
@@ -72,26 +80,17 @@ class LLMService:
         Returns:
             str: The solution to the math problem.
         """
-        print("Math solver is called.")
 
-        # query not null check
-        if query is None:
-            return "Please provide a query."
+        result = self.llm_math.invoke(query)
+        result = result["answer"]
+        result = result.split("Answer: ")[1]
 
-        else:
-            try:
-                result = self.llm_math.invoke(query)
-                result = result["answer"]
-                result = result.split('Answer: ')[1]
-                
-                math_solver_log_qa(input=query, output=result)
-                text_to_pdf_math_solver_qa()
-                
-                return result
-            except Exception as e:
-                return str(e)
+        math_solver_log_qa(input=query, output=result)
+        text_to_pdf_math_solver_qa()
 
-    def data_extractor(self, base64: str, filename: str, filetype: str):
+        return result
+
+    def data_extractor(self, document: DocumentRequest):
         """
         Extracts relevant information from a document based on the given base64 string, filename, and filetype.
 
@@ -103,68 +102,43 @@ class LLMService:
         Returns:
             dict: A dictionary containing the extracted information.
         """
+        doc_str = self.base64_to_text.get_doc(document.base64, document.filetype)
 
-        # base64 not null check
-        if base64 is None:
-            return "Please provide a base64 string."
+        example = """{
+            "name": "John Doe",
+            "about": "I am a software engineer with 5 years of experience in web development.",
+            "skills": ["Python", "JavaScript", "React"],
+            "experience": ["Software Engineer at Company A", "Web Developer at Company B"],
+            "education": ["Bachelor's in Computer Science at University A", "Master's in Software Engineering at University B"],
+            "languages": ["English", "Spanish"],
+            "certificates": ["Certificate in Web Development", "Certificate in Data Science"]
+        }"""
 
-        # filename not null check
-        if filename is None:
-            return "Please provide a filename."
+        prompt = ChatPromptTemplate.from_messages(
+            [
+                (
+                    "system",
+                    "You are an expert extraction algorithm. "
+                    "Only extract relevant information from the resume. "
+                    "If you do not know the value of an attribute asked to extract, "
+                    "return null for the attribute's value.",
+                ),
+                # Please see the how-to about improving performance with
+                # reference examples.
+                MessagesPlaceholder("examples"),
+                ("user", "{text}"),
+            ]
+        )
 
-        # filetype not null check
-        if filetype is None:
-            return "Please provide a filetype."
+        llm = self.chat
 
-        else:
-            try:
-                doc_str = self.base64_to_text.get_doc(base64, filetype)
+        runnable = prompt | llm.with_structured_output(schema=Person, include_raw=False)
 
-                example = """{
-                    "name": "John Doe",
-                    "about": "I am a software engineer with 5 years of experience in web development.",
-                    "skills": ["Python", "JavaScript", "React"],
-                    "experience": ["Software Engineer at Company A", "Web Developer at Company B"],
-                    "education": ["Bachelor's in Computer Science at University A", "Master's in Software Engineering at University B"],
-                    "languages": ["English", "Spanish"],
-                    "certificates": ["Certificate in Web Development", "Certificate in Data Science"]
-                }"""
+        response = runnable.invoke(
+            {"text": doc_str, "examples": [HumanMessage(content=example)]}
+        )
 
-                prompt = ChatPromptTemplate.from_messages(
-                    [
-                        (
-                            "system",
-                            "You are an expert extraction algorithm. "
-                            "Only extract relevant information from the resume. "
-                            "If you do not know the value of an attribute asked to extract, "
-                            "return null for the attribute's value.",
-                        ),
-                        # Please see the how-to about improving performance with
-                        # reference examples.
-                        MessagesPlaceholder("examples"),
-                        ("user", "{text}"),
-                    ]
-                )
+        data_extractor_log_qa(document.filename, document.filetype.value, response)
+        text_to_data_extractor_qa()
 
-                llm = self.chat
-
-                runnable = prompt | llm.with_structured_output(schema=Person, include_raw=False)
-
-                response = runnable.invoke({"text": doc_str, "examples": [HumanMessage(content=example)]})
-                
-                
-                data_extractor_log_qa(filename,filetype,response)
-                text_to_data_extractor_qa()
-                
-
-                return response
-
-            except Exception as e:
-                return str(e)
-            
-
-
-                
-
-
-                
+        return response

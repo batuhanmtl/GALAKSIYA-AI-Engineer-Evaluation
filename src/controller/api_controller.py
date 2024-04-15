@@ -43,7 +43,7 @@ class ApiController:
                 {
                     "source": ".\\lib\\SOURCE_DOCUMENTS\\ilgili_doküman.(pdf,docx,txt)",
                     "content": "Query'e yanıt içermesi muhtemel olan dokümandaki kısmın içeriği",
-                    "similarity_L2_score": 0.20954060554504395 
+                    "similarity_L2_score": 0.20954060554504395
                 }
                 ]
         """
@@ -95,11 +95,5 @@ class ApiController:
                 "certificates": ["Certificate in Python Programming"]
             }
         """
-        print("Data extractor is called.")
 
-        base64 = document.base64
-        filename = document.filename
-        filetype = document.filetype.value
-        # print(filename, filetype)
-        return self.llm_service.data_extractor(base64, filename, filetype.lower())
-
+        return self.llm_service.data_extractor(document)
