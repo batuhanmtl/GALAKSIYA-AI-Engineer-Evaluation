@@ -2,6 +2,8 @@
 
 Bu proje, bir araç tabanlı ajanın sunulduğu bir REST API geliştirmeyi amaçlamaktadır. Ajan, kullanıcı mesajı üzerinde vektör benzerlik araması yapabilen, temel matematik işlemi gerçekleştirebilen ve base64 formatta verilen bir özgeçmiş(pdf,docx,txt) içerisinden belirli bilgilerin(name,about,skills,experience,education,languages,certificates) çıkarımını yapabilen(geliştiriciye bırakılan kısım) araçlara sahiptir.
 
+- **Python version 3.11.8**
+
 ## Tools
 
 ### 1. similarity_search
