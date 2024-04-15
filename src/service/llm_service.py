@@ -102,7 +102,7 @@ class LLMService:
         Returns:
             dict: A dictionary containing the extracted information.
         """
-        doc_str = self.base64_to_text.get_doc(document.base64, document.filetype)
+        doc_str = self.base64_to_text.get_doc(document.base64, document.filetype.value)
 
         example = """{
             "name": "John Doe",
