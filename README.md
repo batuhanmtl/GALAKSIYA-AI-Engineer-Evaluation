@@ -41,7 +41,7 @@ curl -X 'POST' \
 
 
 ### 2. math_solver
-math_solver aracı ile yapılması istenen temel matematik işleminin sözel(üç artı dört) veya matematiksel temsili(3+4) veya iki temsili bir arada bulunduran(125 bölü 5 + eksi yirmi) query girilir ve işlem sonucu(örneğin 7) return edilir.
+math_solver aracı ile yapılması istenen temel matematik işleminin sözel(üç artı dört) veya matematiksel temsili(3+4) veya iki temsili bir arada bulunduran(125 bölü 5 + eksi yirmi) query girilir ve işlem sonucu(örneğin 5) return edilir.
 
 
 **Request body:**
